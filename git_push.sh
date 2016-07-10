@@ -7,7 +7,7 @@
 
 find . -mindepth 1 -maxdepth 1 -type d -exec sh -c '
   cd {};
-  if [[ -e ./.git ]]; then
+  if [ -e ./.git ]; then
     echo "### Pushing $1 ###";
     git push;
   else

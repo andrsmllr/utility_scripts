@@ -10,7 +10,7 @@
 
 find . -mindepth 1 -maxdepth 1 -type d -exec sh -c '
   cd "$1";
-  if [[ -e ./.git ]]; then
+  if [ -e ./.git ]; then
     echo "### Updating $1 ###";
     git pull;
   else
